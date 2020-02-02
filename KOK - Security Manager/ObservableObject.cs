@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KOK___Security_Manager
 {
-    class ObservableObjects : INotifyPropertyChanged
+    public class ObservableObjects : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

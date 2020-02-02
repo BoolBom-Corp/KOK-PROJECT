@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace KOK___Security_Manager.Models
 {
+    public enum ContractType
+    {
+        FullTimeContract,
+        HalfTimeContract,
+        ThreeQuartersTimeContract,
+        CasualContract
+    }
+    public enum ShiftType
+    {
+        A,
+        B,
+        C
+    }
+
     public class Employee
     {
-        public enum ContractType
-        {
-            FullTimeContract,
-            HalfTimeContract,
-            ThreeQuartersTimeContract,
-            CasualContract
-        }
-        public enum ShiftType
-        {
-            A,
-            B,
-            C
-        }
-
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
