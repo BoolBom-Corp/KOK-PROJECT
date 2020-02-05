@@ -19,6 +19,9 @@
 
         <!--Grid.Row1 Header Menu-->
         <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#FF3C2C2C">
+            <Grid.BitmapEffect>
+                <DropShadowBitmapEffect/>
+            </Grid.BitmapEffect>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="130"/>
@@ -32,16 +35,33 @@
         </Grid>
 
         <!--Grid.Row2 Left Menu-->
-        <Grid Grid.Row="1" Grid.Column="0" Background="#FF725252">
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.BitmapEffect>
+                <DropShadowBitmapEffect/>
+            </Grid.BitmapEffect>
             <Grid.RowDefinitions>
                 <RowDefinition Height="150"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <!--Button-->
-            <StackPanel Grid.Row="1" Orientation="Vertical">
-                <userControls:MainWindowLeftMenuButton Text="Strona Główna" />
+            <!--Logo-->
+            <Grid Grid.Row="0" Background="#FF725252" >
                 
+            </Grid>
+            
+            <!--Buttons-->
+            <StackPanel Grid.Row="1" Orientation="Vertical" Background="#FF725252" Margin="0,0,0,3">
+                <userControls:MainWindowLeftMenuButton Text="Strona Główna" PhotoPath="/Image/Icons/DaashboardIcon.png" MouseDown="MainWindowLeftMenuButton_MouseDown"  Uid="1"/>
+                <userControls:MainWindowLeftMenuButton Text="Pracownicy" PhotoPath="/Image/Icons/EmployeesIcon.png" MouseDown="MainWindowLeftMenuButton_MouseDown" Uid="2"/>
+                <userControls:MainWindowLeftMenuButton Text="Grafik   Pracy" PhotoPath="/Image/Icons/workSheduleIcon.png" MouseDown="MainWindowLeftMenuButton_MouseDown" Uid="3"/>
             </StackPanel>
+        </Grid>
+        
+        <!--Grid.Row2 Grid.Column2 FrameTemplate-->
+        <Grid Grid.Row="1" Grid.Column="1">
+            
+            <Frame x:Name="MainFrame" Margin="20,15">
+                
+            </Frame>
         </Grid>
     </Grid>
 </Window>

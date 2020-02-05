@@ -62,6 +62,12 @@
     <Compile Include="UserControls\MainWindowLeftMenuButton.xaml.cs">
       <DependentUpon>MainWindowLeftMenuButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\AddEmployeeFrame.xaml.cs">
+      <DependentUpon>AddEmployeeFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeesTabControlFrame.xaml.cs">
+      <DependentUpon>EmployeesTabControlFrame.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainShellWindow.xaml.cs">
       <DependentUpon>MainShellWindow.xaml</DependentUpon>
     </Compile>
@@ -101,6 +107,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\AddEmployeeFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EmployeesTabControlFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainShellWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,6 +124,12 @@
     <Resource Include="Image\Icons\DaashboardIcon.png" />
     <Resource Include="Image\Icons\minimize.png" />
     <Resource Include="Image\Icons\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icons\EmployeesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icons\workSheduleIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

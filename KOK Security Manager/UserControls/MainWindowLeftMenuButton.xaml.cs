@@ -23,8 +23,7 @@ namespace KOK_Security_Manager.UserControls
         public static readonly DependencyProperty TextProperty =
             DependencyProperty.Register("Text", typeof(string), typeof(MainWindowLeftMenuButton));
         public static readonly DependencyProperty PhotoPathProperty =
-            DependencyProperty.Register("PhotoPath", typeof(ImageSourceConverter), typeof(MainWindowLeftMenuButton), new UIPropertyMetadata(null));
-
+            DependencyProperty.Register("PhotoPath", typeof(ImageSource), typeof(MainWindowLeftMenuButton), new UIPropertyMetadata(null));
 
         public string Text
         {
