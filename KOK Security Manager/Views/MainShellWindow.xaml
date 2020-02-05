@@ -1,0 +1,67 @@
+﻿<Window x:Class="KOK_Security_Manager.View.MainShellWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KOK_Security_Manager.View"
+        xmlns:userControls="clr-namespace:KOK_Security_Manager.UserControls"
+        mc:Ignorable="d"
+        Title="MainShellWindow" Height="800" Width="1200" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="270"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Grid.Row1 Header Menu-->
+        <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#FF3C2C2C">
+            <Grid.BitmapEffect>
+                <DropShadowBitmapEffect/>
+            </Grid.BitmapEffect>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="130"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal" >
+                <Image Source="/Image/Icons/power.png" Height="16" Margin="10,5"/>
+                <Image Source="/Image/Icons/minimize.png" Height="16" Margin="10,5"/>
+                <Image Source="/Image/Icons/power.png" Height="16" Margin="10,5"/>
+            </StackPanel>
+            <TextBlock Grid.Column="0" Text="KOK Project" FontSize="24" FontFamily="Stencil" Margin="20,0,0,0" Foreground="White"/>
+        </Grid>
+
+        <!--Grid.Row2 Left Menu-->
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.BitmapEffect>
+                <DropShadowBitmapEffect/>
+            </Grid.BitmapEffect>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Logo-->
+            <Grid Grid.Row="0" Background="#FF725252" >
+                
+            </Grid>
+            
+            <!--Buttons-->
+            <StackPanel Grid.Row="1" Orientation="Vertical" Background="#FF725252" Margin="0,0,0,3">
+                <userControls:MainWindowLeftMenuButton Text="Strona Główna" PhotoPath="/Image/Icons/DaashboardIcon.png" MouseDown="MainWindowLeftMenuButton_MouseDown"  Uid="1"/>
+                <userControls:MainWindowLeftMenuButton Text="Pracownicy" PhotoPath="/Image/Icons/EmployeesIcon.png" MouseDown="MainWindowLeftMenuButton_MouseDown" Uid="2"/>
+                <userControls:MainWindowLeftMenuButton Text="Grafik   Pracy" PhotoPath="/Image/Icons/workSheduleIcon.png" MouseDown="MainWindowLeftMenuButton_MouseDown" Uid="3"/>
+            </StackPanel>
+        </Grid>
+        
+        <!--Grid.Row2 Grid.Column2 FrameTemplate-->
+        <Grid Grid.Row="1" Grid.Column="1">
+            
+            <Frame x:Name="MainFrame" Margin="20,15">
+                
+            </Frame>
+        </Grid>
+    </Grid>
+</Window>

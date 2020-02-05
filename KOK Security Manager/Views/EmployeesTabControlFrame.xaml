@@ -1,0 +1,29 @@
+﻿<Page x:Class="KOK_Security_Manager.Views.EmployeesTabControlFrame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KOK_Security_Manager.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EmployeesTabControlFrame">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel >
+            <Button Width="100" Height="50" Content="Dodaj" HorizontalAlignment="Left" Margin="40,20" Click="Button_Click"/>
+        </DockPanel>
+        
+        <TabControl x:Name="EmployeesTabControl" Grid.Row="1">
+            <TabItem Header="Wszyscy Pracownicy">
+                <DataGrid>
+                    
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

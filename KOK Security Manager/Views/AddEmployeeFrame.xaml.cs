@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KOK_Security_Manager
+namespace KOK_Security_Manager.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy AddEmployeeFrame.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddEmployeeFrame : Page
     {
-        public MainWindow()
+        public AddEmployeeFrame()
         {
             InitializeComponent();
         }
